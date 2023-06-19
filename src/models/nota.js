@@ -14,20 +14,21 @@ class Nota {
     );
   }
 
-  mediaCA(media = this.mediaFinal()) {
-    switch (media) {
-      case media >= 9.0:
-        return "SS - Superior";
-      case media >= 7.0 && media <= 8.99:
-        return "MS - Médio Superior";
-      case media >= 5.0 && media <= 6.99:
-        return "MM - Médio";
-      case media >= 3.0 && media <= 4.99:
-        return "MI - Médio Inferior";
-      case media >= 1.0 && media <= 2.99:
-        return "II - Inferior";
-      case media >= 0 && media <= 2.99:
-        return "SR - Sem Rendimento";
+  mediaCA() {
+    const media = this.mediaFinal();
+
+    if (media >= 0 && media < 2.5) {
+      return "II";
+    } else if (media >= 2.5 && media < 5) {
+      return "MI";
+    } else if (media >= 5 && media < 7.5) {
+      return "MM";
+    } else if (media >= 7.5 && media < 9) {
+      return "MS";
+    } else if (media >= 9 && media <= 10) {
+      return "SS";
+    } else {
+      throw new Error("Nota inválida.");
     }
   }
 }
