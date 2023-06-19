@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "http-server ./ --port=5001 -c-1",
-    "tests": "cypress open"
+    "tests": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
