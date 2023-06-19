@@ -20,13 +20,13 @@ class Nota {
     if (media >= 0 && media < 2.5) {
       return "II";
     } else if (media >= 2.5 && media < 5) {
-      return "MI";
+      return "MI - Médio Inferior";
     } else if (media >= 5 && media < 7.5) {
-      return "MM";
+      return "MM - Médio";
     } else if (media >= 7.5 && media < 9) {
-      return "MS";
+      return "MS - Médio Superior";
     } else if (media >= 9 && media <= 10) {
-      return "SS";
+      return "SS - Superior";
     } else {
       throw new Error("Nota inválida.");
     }
