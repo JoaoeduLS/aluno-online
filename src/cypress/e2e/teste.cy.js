@@ -1,6 +1,6 @@
 describe("template spec", () => {
   it("Novo requerimento", () => {
-    cy.visit("http://localhost:3000/requerimentos");
+    cy.visit("http://localhost:5001/views/requerimentos/novo.ejs");
     cy.get(".btn").click();
     cy.get("#inputDisciplina").select(
       "ADS030 - Manutenção de Software e DevOps"
